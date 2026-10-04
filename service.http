@@ -1,0 +1,7 @@
+### Trigger Hana Procedure
+POST http://localhost:4004/odata/v4/bank-account-api/getAccountBalance
+Content-Type: application/json
+
+{
+    "accountNo": "1000984512"
+}

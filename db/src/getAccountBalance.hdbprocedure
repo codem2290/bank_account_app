@@ -1,0 +1,15 @@
+PROCEDURE "getAccountBalance"(
+    IN iv_account_no NVARCHAR(35),
+    OUT ov_balance DECIMAL(10, 2)
+)
+LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA CURRENT_SCHEMA
+   READS SQL DATA AS 
+BEGIN
+
+     SELECT "BALANCE" into ov_balance
+     from "BANK_DB_ACCOUNTS"
+     where "ACCOUNTNO" = iv_account_no;
+
+END 
